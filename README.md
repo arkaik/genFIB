@@ -1,0 +1,2 @@
+# genFIB
+Generador horaris FIB
