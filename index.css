@@ -3,8 +3,29 @@ body {
 
 }
 
-#assig_list {
-    display: inline-block;
-    height: 25rem;
+.list {
+    display: inline-flex;
+    background-color: white;
+    height: 10rem;
+    width: 5rem;
+    flex-flow: column;
     overflow-y: auto;
+}
+
+.vertical {
+    display: inline-flex;
+    flex-flow: column;
+}
+
+#assig_selection {
+    display: inline-flex;
+    align-items: center;
+}
+
+#assig_list > .active {
+    background-color: steelblue;
+}
+
+#opt_list > .active {
+    background-color: palegreen;
 }

@@ -20,14 +20,22 @@
             <label for="tardes_cb">Tardes</label><input type="checkbox" id="tardes_cb" name="t_cb">
         </div>
         <div class="tol">
-            <label for="toler_range">Tolerància</label><input type="range" id="toler_range" name="t_r">
+            <label for="toler_range">Tolerància</label><input type="number" id="toler_range" name="t_r">
         </div>
         <div class="solap">
             Tipus de solapament:
             <br>
             <label for="minim_solap">Mínim solapament</label><input type="checkbox" id="minim_solap" name="ms_cb">
         </div>
-        <span class="list assigs" id="assig_list"></span>
+        <span id="assig_selection">
+            <span class="list" id="assig_list"></span>
+            <span class="vertical">
+                <button type="button" id="l2r" name="l2r_b">></button>
+                <button type="button" id="r2l" name="r2l_b"><</button>
+            </span>
+            <span class="list" id="opt_list"></span>
+        </span>
+        <button type="button" id="cerca" name="search">Cerca horaris</button>
 
 
         </div>
