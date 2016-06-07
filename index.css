@@ -2,3 +2,8 @@ body {
     background-color: #e0e0e0;
 
 }
+
+#assig_list {
+    display: inline-block;
+    height: 50rem;
+}
