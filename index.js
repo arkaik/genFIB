@@ -160,7 +160,10 @@ var main = function(){
     $.get("https://raco.fib.upc.edu/api/horaris/assignatures-titulacio.txt", arg, resp => {
         let rows = resp.split("\n");
         for (a of rows) {
-            var assig_elem = $("<div>"+a+"</div>");
+            let reg = new RegExp("GRAU\-")
+            let aa = a.replace(reg,"")
+            console.log(aa);
+            var assig_elem = $("<div>"+aa+"</div>");
             assig_elem.addClass("assig");
             assig_elem.appendTo("#assig_list");
         }
@@ -173,13 +176,15 @@ var main = function(){
 
     $(".est_sel").change(function(){
         $(".assig").remove();
-        var est = $(".est_sel option:selected").text;
+        var est = $(".est_sel option:selected").val();
         var arg = $.param({codi: est},true);
         $.get("https://raco.fib.upc.edu/api/horaris/assignatures-titulacio.txt", arg, resp => {
             let rows = resp.split("\n");
             for (a of rows) {
-                var assig_elem = $("<div>"+a+"</div>");
-                assig_elem.addClass("assig");
+                let reg = new RegExp(`(${est})?\-(${est})?`)
+                let aa = a.replace(reg,"")
+                let assig_elem = $("<div>"+aa+"</div>");
+                assig_elem.addClass("assig")
                 assig_elem.appendTo("#assig_list");
             }
 
