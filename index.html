@@ -6,6 +6,7 @@
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script src="index.js"></script>
+
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
@@ -27,6 +28,17 @@
             <br>
             <label for="minim_solap">Mínim solapament</label><input type="checkbox" id="minim_solap" name="ms_cb">
         </div>
+        <div class="estudis">
+            <label for="est">Estudis:</label>
+            <select class="est_sel" name="est">
+                <option value="GRAU">Grau en Enginyeria Informàtica</option>
+                <option value="MAI">Master in Artificial Intelligence</option>
+                <option value="MEI">Master en Enginyeria Informàtica</option>
+                <option value="MIRI">Master in Innovation and Research in Informatics</option>
+                <option value="DMKM">Erasmus Data Mining and Knownledge Management</option>
+                <option value="IT4BI">Erasmus Information Technology for Business Intelligence</option>
+            </select>
+        </div>
         <span id="assig_selection">
             <span class="list" id="assig_list"></span>
             <span class="vertical">
@@ -36,9 +48,9 @@
             <span class="list" id="opt_list"></span>
         </span>
         <button type="button" id="cerca" name="search">Cerca horaris</button>
-
+        <div id="horari"></div>
 
         </div>
-
+        <script src="css-polyfills.min.js"></script>
     </body>
 </html>

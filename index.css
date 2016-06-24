@@ -1,13 +1,12 @@
 body {
     background-color: #e0e0e0;
-
 }
 
 .list {
     display: inline-flex;
     background-color: white;
-    height: 10rem;
-    width: 5rem;
+    height: 15rem;
+    width: 7.55rem;
     flex-flow: column;
     overflow-y: auto;
 }
@@ -17,9 +16,32 @@ body {
     flex-flow: column;
 }
 
+.hora {
+    display: inline-flex;
+    flex-flow: column;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.grup {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
 #assig_selection {
     display: inline-flex;
     align-items: center;
+}
+
+#horari {
+    margin: 10px;
+    display: grid;
+
+    grid-template-columns: repeat(7, 7fr);
+    grid-template-rows: repeat(12, max-content);
 }
 
 #assig_list > .active {
