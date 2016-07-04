@@ -13,21 +13,19 @@
         <p>
             Generador d'horaris genFIB
         </p>
-        <div class="opt_mt">
-            Opcions Matí/Tarda
-            <br>
+        <span class="apartat opt_mt">
             Preferiblement:
             <label for="matins_cb"> Matins</label><input type="checkbox" id="matins_cb" name="m_cb">
             <label for="tardes_cb">Tardes</label><input type="checkbox" id="tardes_cb" name="t_cb">
-        </div>
-        <div class="tol">
-            <label for="toler_range">Tolerància</label><input type="number" id="toler_range" name="t_r">
-        </div>
-        <div class="solap">
+        </span>
+        <span class="apartat tol">
+            <label for="toler_range">Tolerància</label><input type="number" id="toler_range" name="t_r" min=0>
+        </span>
+        <span class="apartat solap">
             Tipus de solapament:
-            <br>
             <label for="minim_solap">Mínim solapament</label><input type="checkbox" id="minim_solap" name="ms_cb">
-        </div>
+            <label for="maxim_permes">Màxim permès:</label><input type="checkbox" id="maxim_permes" name="mp_cb"><input type="number" id="toler_range" name="t_r" min=0 disabled=true>
+        </span>
         <div class="estudis">
             <label for="est">Estudis:</label>
             <select class="est_sel" name="est">
@@ -48,9 +46,8 @@
             <span class="list" id="opt_list"></span>
         </span>
         <button type="button" id="cerca" name="search">Cerca horaris</button>
-        <div id="horari"></div>
+        <div id="horari_list"></div>
 
-        </div>
         <script src="css-polyfills.min.js"></script>
     </body>
 </html>

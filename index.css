@@ -2,11 +2,16 @@ body {
     background-color: #e0e0e0;
 }
 
+.apartat {
+    border: 1px solid black;
+    padding: 5px;
+}
+
 .list {
     display: inline-flex;
     background-color: white;
     height: 15rem;
-    width: 7.55rem;
+    width: 7.75rem;
     flex-flow: column;
     overflow-y: auto;
 }
@@ -16,11 +21,20 @@ body {
     flex-flow: column;
 }
 
+.horari {
+    margin: 10px;
+    display: grid;
+
+    grid-template-columns: repeat(6, 6fr);
+    grid-template-rows: repeat(14, max-content);
+}
+
 .hora {
     display: inline-flex;
     flex-flow: column;
     background-color: white;
     border: 1px solid black;
+    min-height: 18px;
 }
 
 .grup {
@@ -36,12 +50,9 @@ body {
     align-items: center;
 }
 
-#horari {
-    margin: 10px;
-    display: grid;
-
-    grid-template-columns: repeat(7, 7fr);
-    grid-template-rows: repeat(12, max-content);
+#horari_list {
+    display: flex;
+    flex-direction: column;
 }
 
 #assig_list > .active {
